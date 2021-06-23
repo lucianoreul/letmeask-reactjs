@@ -8,9 +8,9 @@
     cursor: pointer;
 
     display: flex;
+    align-items: stretch;
 
     div {
-        height: 100%;
         background: #835afd;
         padding: 0 12px;
         display: flex;

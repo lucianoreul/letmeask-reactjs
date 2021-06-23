@@ -11,6 +11,7 @@ import { Button } from '../components/Button';
 import { useAuth } from '../hooks/useAuth';
 
 import '../styles/auth.scss';
+import toast from 'react-hot-toast';
 
 export function Home() {
     const history = useHistory();
@@ -34,7 +35,7 @@ export function Home() {
         const roomRef = await database.ref(`rooms/${roomCode}`).get();
 
         if (!roomRef.exists()) {
-            alert('Room does not exists.');
+            toast.error('Room does not exists.');
             return;
         }
 
